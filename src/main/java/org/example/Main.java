@@ -13,10 +13,12 @@ public class Main {
         calc.add(2.4);
         calc.add(4.5);
         calc.divide(4);
-        System.out.println(calc.getRezultat());
+        System.out.println(calc.getResult());
 
-        CalculatorV2 calc2= new CalculatorV2(calc.getRezultat());
+        CalculatorV2 calc2= new CalculatorV2(calc.getResult());
         calc2.Sqrt();
-        System.out.println(calc2.getRezultat());
+        System.out.println(calc2.getResult());
+
+        System.out.println(new Calcule(4).add(7).divide(5).getResult());
     }
 }

@@ -8,22 +8,26 @@ public class Calcule {
     }
     public Calcule(){}
 
-    public void add(double value)
-    { this.rezultat+=value;}
-    public void divide(double value)
+    public Calcule add(double value)
+    { this.rezultat+=value;
+    return this;}
+    public Calcule divide(double value)
     {   if(value==0) {
         throw new IllegalArgumentException("nu merge");
     }
-        this.rezultat/=value; }
-    public void multiply(double value)
-    { this.rezultat*=value; }
+        this.rezultat/=value;
+    return this;}
+    public Calcule multiply(double value)
+    { this.rezultat*=value;
+    return this;}
 
-    public void substract(double value)
+    public Calcule substract(double value)
     {
         this.rezultat-=value;
+        return this;
     }
 
-    public double getRezultat(){
+    public double getResult(){
         return rezultat;
     }
 }
